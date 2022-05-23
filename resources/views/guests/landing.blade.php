@@ -19,9 +19,9 @@
          <tbody>
             @foreach ($posts as $post)
                <tr>
-                  <td scope="row">{{ $post->title }}</th>
-                  <td scope="row">{{ $post->user->name }}</th>
-                  <td scope="row">{{ $post->category->name }}</th>
+                  <td scope="row">{{ $post->title }}</td>
+                  <td scope="row">{{ $post->user->name }}</td>
+                  <td scope="row">{{ $post->category->name }}</td>
                   <td><time>{{ date('d/m/Y', strtotime($post->date)) }}</time></td>
                   <td>{{ substr($post->content, 0, 64) }}...</td>
                </tr>

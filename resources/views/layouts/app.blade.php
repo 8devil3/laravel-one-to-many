@@ -49,6 +49,14 @@
                         </li>
                      @endif
                   @else
+                     <li class="nav-item d-block dropdown">
+                        {{-- posts btn --}}
+                        <a href="{{ route('admin.posts.index') }}" aria-controls="posts" class="btn btn-link">My posts</a>
+                     </li>
+                     <li class="nav-item d-block dropdown">
+                        {{-- categories btn --}}
+                        <a href="{{ route('admin.categories.index') }}" aria-controls="categories" class="btn btn-link">Categories</a>
+                     </li>
                      <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                            {{ Auth::user()->name }}

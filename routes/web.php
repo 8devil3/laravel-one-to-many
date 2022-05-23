@@ -26,7 +26,8 @@ Route::middleware('auth')
       ->prefix('admin')
       ->group(function () {
             Route::get('/', 'DashboardController@index')->name('dashboard');
-            Route::post('/slugger', 'HomeController@slugger')->name('slugger');
+            Route::post('/slugger', 'DashboardController@slugger')->name('slugger');
+            Route::resource('/categories', 'CategoryController');
             Route::resource('/posts', 'PostController');
       });
 

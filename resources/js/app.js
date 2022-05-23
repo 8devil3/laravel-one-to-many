@@ -64,12 +64,19 @@ if (btnReset) {
 }
 
 
+
 //eliminazione da pagina index
 const btnDel = document.querySelectorAll('.btn-del');
 const indexForm = document.querySelector('#indexForm');
 
 btnDel.forEach(btn => {
    btn.addEventListener('click', function(){
-      indexForm.action = this.dataset.baseurl + '/' + this.dataset.slug
+      if (this.dataset.type == 'post') {
+         indexForm.action = this.dataset.baseurl + '/' + this.dataset.slug
+      } else if (this.dataset.type == 'category') {
+         indexForm.action = this.dataset.baseurl + '/' + this.dataset.id
+      } else {
+         //nothing
+      }
    });
 });

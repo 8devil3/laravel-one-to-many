@@ -40159,7 +40159,12 @@ var btnDel = document.querySelectorAll('.btn-del');
 var indexForm = document.querySelector('#indexForm');
 btnDel.forEach(function (btn) {
   btn.addEventListener('click', function () {
-    indexForm.action = this.dataset.baseurl + '/' + this.dataset.slug;
+    if (this.dataset.type == 'post') {
+      indexForm.action = this.dataset.baseurl + '/' + this.dataset.slug;
+    } else if (this.dataset.type == 'category') {
+      indexForm.action = this.dataset.baseurl + '/' + this.dataset.id;
+    } else {//nothing
+    }
   });
 });
 
@@ -40296,8 +40301,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Documents\Boolean\laravel-auth\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Documents\Boolean\laravel-auth\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Documents\Boolean\laravel-one-to-many\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Documents\Boolean\laravel-one-to-many\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

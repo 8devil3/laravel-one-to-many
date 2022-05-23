@@ -29,8 +29,8 @@
    </div>
 
    <div class="mb-3 d-flex flex-column">
-      <label for="description" class="form-label">Content</label>
-      <textarea name="description" cols="30" rows="10" class="form-control" aria-describedby="description">{{ old('content', $post->content) }}</textarea>
+      <label for="content" class="form-label">Content</label>
+      <textarea name="content" cols="30" rows="10" class="form-control" aria-describedby="content">{{ old('content', $post->content) }}</textarea>
    </div>
 
    <div class="mb-3">
