@@ -13,6 +13,7 @@
             <tr>
                <th scope="col">Title</th>
                <th scope="col">Date</th>
+               <th scope="col">Category</th>
                <th scope="col">Excerpt</th>
                <th scope="col">Actions</th>
             </tr>
@@ -21,7 +22,8 @@
             @foreach ($posts as $post)
                <tr>
                   <td scope="row">{{ $post->title }}</th>
-                  <td>{{ date('d/m/Y', strtotime($post->date)) }}</td>
+                  <td scope="row"><time>{{ date('d/m/Y', strtotime($post->date)) }}</time></td>
+                  <td scope="row">{{ $post->category->name }}</th>
                   <td>{{ substr($post->content, 0, 64) }}...</td>
                   <td>
                      <a href="{{ route('admin.posts.show', $post->slug) }}" class="btn btn-primary">View</a>
