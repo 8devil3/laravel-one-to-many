@@ -20,6 +20,7 @@ class CreatePostTable extends Migration
          $table->datetime('date');
          $table->string('slug', 255);
          $table->foreignId('user_id')->constrained();
+         $table->foreignId('category_id')->constrained();
          $table->timestamps();
       });
     }

@@ -8,13 +8,13 @@ use App\User;
 
 class UserInfoSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run(FakerGenerator $faker)
-    {
+   /**
+    * Run the database seeds.
+    *
+    * @return void
+    */
+   public function run(FakerGenerator $faker)
+   {
       $faker = FakerFactory::create('it_IT');
 
       $users = User::all();
@@ -27,5 +27,5 @@ class UserInfoSeeder extends Seeder
             'user_id' => $user->id
          ]);
       }
-    }
+   }
 }

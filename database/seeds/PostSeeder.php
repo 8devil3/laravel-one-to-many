@@ -5,6 +5,7 @@ use App\Post;
 use App\User;
 use Faker\Generator as FakerGenerator;
 use Faker\Factory as FakerFactory;
+use App\Category;
 // use Illuminate\Foundation\Auth\User;
 
 
@@ -28,7 +29,8 @@ class PostSeeder extends Seeder
             'content' => $faker->paragraph(rand(2,6)),
             'date' => $faker->date(),
             'slug' => Post::genSlug($title),
-            'user_id' => User::inRandomOrder()->first()->id
+            'user_id' => User::inRandomOrder()->first()->id,
+            'category_id' => Category::inRandomOrder()->first()->id
          ]);
       }
    }
